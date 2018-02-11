@@ -8,7 +8,11 @@ import java.sql.Statement;
 public class DatabaseAccessObject {
 
     
-    
+	/**
+	 * 
+	 * @return Connection Object
+	 * @throws Exception
+	 */	
     public static Connection toConnect() throws Exception{
     
         Connection con=null;
@@ -23,9 +27,10 @@ public class DatabaseAccessObject {
     
     /**
      * 
-     * @String query
-     * @return
-     * @throws Exception 
+     * @param query SQL query to fetch data from table
+     * @param st Statement interface reference
+     * @return returns ResultSet of that query
+     * @throws Exception
      */
     public static ResultSet toSelect(String query,Statement st)throws Exception{
         
@@ -36,9 +41,10 @@ public class DatabaseAccessObject {
     
     /**
      * 
-     * @param query
-     * @return
-     * @throws Exception 
+     * @param query SQL query to fetch data from table
+     * @param st Statement interface reference
+     * @return returns either (1) the row count, how much rows are affected by query or (2) 0 for SQL statements that return nothing i.e. DDL 
+     * @throws Exception
      */
     public static int toInsertUpdateDelete(String query,Statement st)throws Exception{
         
