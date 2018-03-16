@@ -47,8 +47,7 @@ public class DatabaseDMLTest {
 				int i = DatabaseAccessObject.toInsertUpdateDelete(qry, st);
 			} catch (Exception e) {
 				// will execute only if there is some problem in query
-				assertTrue(
-						"Error While Executing DB Query : " + e.getMessage(),
+				assertTrue("Error While Executing DB Query : " + e.getMessage(),
 						false);
 				e.printStackTrace();
 			}
