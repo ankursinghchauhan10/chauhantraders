@@ -15,7 +15,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class DatabaseExecution {
-	Logger log = LoggerClass.getLocalLogger(DatabaseExecution.class.getName());
+	Logger log = LoggerClass.getLocalLogger(this);
 
 	@Test(timeout = 1000)
 	public void fetchData() {

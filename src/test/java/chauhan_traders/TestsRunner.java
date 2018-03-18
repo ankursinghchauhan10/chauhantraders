@@ -9,16 +9,18 @@ import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
 public class TestsRunner {
+	
+	Logger log = LoggerClass.getLocalLogger(this);
 	public static void main(String[] args) {
-		Logger log = LoggerClass.getLocalLogger(TestsRunner.class.getName());
+		TestsRunner ob = new TestsRunner();
 		Result rs = JUnitCore.runClasses(RunAllTests.class);
 
 		// Prints the current results status (Pass/Fail)
-		log.info("Result Status " + rs.wasSuccessful());
+		ob.log.info("Result Status " + rs.wasSuccessful());
 
 		// Prints all cause of failures
 		for (Failure f : rs.getFailures()) {
-			log.severe(f.toString());
+			ob.log.severe(f.toString());
 		}
 	}
 }

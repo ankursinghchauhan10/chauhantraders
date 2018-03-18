@@ -16,7 +16,7 @@ import org.junit.Test;
 
 public class DatabaseDMLTest {
 
-	Logger log = LoggerClass.getLocalLogger(DatabaseDMLTest.class.getName());
+	Logger log = LoggerClass.getLocalLogger(this);
 
 	/**
 	 * Test case is to check that with all valid data test is getting PASS.
