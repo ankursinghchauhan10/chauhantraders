@@ -22,19 +22,18 @@ public class ValidationMethods {
 	// isAlphabet
 	public static boolean isAlphabet(String dateToValidate) {
 
-		final String DATE_PATTERN = "^\\p{L}+[\\p{L}\\p{Z}\\p{P}]{0,}";
+		final String PATTERN = "^\\p{L}+[\\p{L}\\p{Z}\\p{P}]{0,}";
 
-		pattern = Pattern.compile(DATE_PATTERN);
+		pattern = Pattern.compile(PATTERN);
 		matcher = pattern.matcher(dateToValidate);
 		return matcher.matches();
 	}
 
 	// isMobileNumber
 	public static boolean isMobileNumber(String dateToValidate) {
+		final String Mobile_PATTERN = "^[0-9]{10}";
 
-		final String DATE_PATTERN = "^[0-9]{10}";
-
-		pattern = Pattern.compile(DATE_PATTERN);
+		pattern = Pattern.compile(Mobile_PATTERN);
 		matcher = pattern.matcher(dateToValidate);
 		return matcher.matches();
 	}
